@@ -3,7 +3,7 @@
     border-radius: 8px;
     padding: 2.5rem;
 }
-
+/* DÁ MARGEM APENAS DO 2 POST EM DIANTE*/
 .post + .post {
     margin-top: 2rem;
 }
@@ -42,15 +42,6 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.author img {
-        box-sizing: initial;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 8px;
-        border: 3px solid var(--gray-800);
-        outline: 2px solid var(--green-500);
 }
 
 .authorInfo {

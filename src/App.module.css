@@ -8,3 +8,13 @@
     gap: 2rem;
     align-items: flex-start; /*sidebar e feed fica alinhado no top, porém o sidebar fixo*/
 }
+
+@media (max-width: 768px) {
+    .html {
+        font-size: 87.5%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

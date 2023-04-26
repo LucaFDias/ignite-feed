@@ -4,8 +4,6 @@ function Header() {
     return (
         <div className={Styles.header}>
             <img src={igniteLogo} alt="logo" />
-            <strong>IGnite Feed</strong>
-
         </div>
     )
 }

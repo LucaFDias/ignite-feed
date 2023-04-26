@@ -3,6 +3,51 @@ import Header from './components/Header';
 import { Post } from './components/Post';
 import { Sidebar } from './components/Sidebar';
 import './global.css';
+
+const posts = [
+
+  {
+      id: 1,
+      author: {
+          avatarUrl: 'https://github.com/diego3g.png',
+          name: 'Diego Fernandes',
+          role: 'CTO @ Rocketseat',
+      },
+      content: [
+          {type: 'paragraph', content: 'Fala galera'},
+          {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu potifolio. É um projeto que fiz no NLW Return, evento da rocketseat.'},
+      ],
+      publishedAt: new Date('2022-05-03 20:00:00')
+  },
+  {
+      id: 2,
+      author: {
+          avatarUrl: 'https://github.com/lucaFdias.png',
+          name: 'Lucas Dias',
+          role: 'Engineer Software',
+      },
+      content: [
+          {type: 'paragraph', content: 'Fala galera'},
+          {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu potifolio. É um projeto que fiz no NLW Return, evento da rocketseat.'},
+      ],
+      publishedAt: new Date('2022-05-03 20:00:00')
+  },
+  {
+      id: 3,
+      author: {
+          avatarUrl: 'https://github.com/maykbrito.png',
+          name: 'maykbrito',
+          role: 'Educador @Rocketseat',
+      },
+      content: [
+          {type: 'paragraph', content: 'Fala galera'},
+          {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu potifolio. É um projeto que fiz no NLW Return, evento da rocketseat.'},
+      ],
+      publishedAt: new Date('2022-05-03 20:00:00')
+  },
+];
+
+
 function App() {
   return (
     <div>
@@ -12,13 +57,15 @@ function App() {
           <Sidebar/>
         </aside>
         <main>
-          <Post
-          author="Lucas Dias"
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ut 
-          reprehenderit doloribus. Libero qui aliquam repellendus labore numquam rerum hic animi 
-          aliquid, laboriosam accusantium odit modi doloremque, perspiciatis corporis molestiae?"
-          />
-          <Post/>
+            {posts.map(post => {
+              return (
+                <Post
+                  author={post.author}
+                  content={post.content}
+                  publishedAt={post.publishedAt}
+                />
+              )
+            })}
         </main>
       </div>
     </div>

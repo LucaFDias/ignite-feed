@@ -42,6 +42,7 @@ const posts = [
       content: [
           {type: 'paragraph', content: 'Fala galera'},
           {type: 'paragraph', content: 'Acabei de subir mais um projeto no meu potifolio. É um projeto que fiz no NLW Return, evento da rocketseat.'},
+          {type: 'link', content: 'jane.desing/doctorcare'}
       ],
       publishedAt: new Date('2022-05-03 20:00:00')
   },
